@@ -38,11 +38,34 @@ components/<分类>/<名称>/
 
 公开仓库：https://github.com/FanMoFeng/ui-library
 
+## shadcn 用法（改造后）
+
+这个仓现在也是一个 shadcn GitHub Registry：根目录有 `registry.json`，`components/ui/` 是 shadcn 默认的组件安装目录，`lib/utils.ts` 是标准的 `cn()` 工具。
+
+在已经用 `shadcn init` 初始化过的项目里（React + Tailwind，别名 `components` → `@/components`、`utils` → `@/lib/utils`、`ui` → `@/components/ui`），按下面这样装，代码会直接落到你项目里、归你所有，不是 npm 依赖：
+
+```bash
+# 装一个，例如玻璃按钮
+pnpm dlx shadcn@latest add FanMoFeng/ui-library/glass-button
+
+# 看这个仓里都有什么
+pnpm dlx shadcn@latest list FanMoFeng/ui-library
+
+# 校验 registry（推上去之后跑）
+pnpm dlx shadcn@latest registry validate FanMoFeng/ui-library
+```
+
+`registry.json` 里目前有 7 项：上面 6 个 UI 组件 + `utils`（cn 工具）。
+Claude Model Selector 虽然是 Web Component，但它的 React 封装也是 `.tsx`，所以同样走 `registry:ui` 安装，安装后按它 README 里的用法用即可。
+
+注意：`components/<分类>/<名称>/` 仍是收藏的源头（代码 + 提示词 + 展示说明都在那），`components/ui/` 是给 shadcn 安装用的同名副本，两边内容必须保持一致，不要只改一边。
+
 ## 怎么加一条
 
-1. 在 `components/<分类>/<名称>/` 按上面结构放齐 5 个文件
-2. 在 `catalog.json` 里加一条，写清分类、标签、框架
-3. 在下面这个表里加一行
+1. 在 `components/<分类>/<名称>/` 按上面结构放齐文件
+2. 把 `component.tsx` 以不重名的文件名复制到 `components/ui/`（例如 `glass-button.tsx`，不要都叫 `component.tsx`，否则安装时会撞名）
+3. 在根目录 `registry.json` 里加一项，`files[].path` 指向 `components/ui/` 里那个文件
+4. 在 `catalog.json` 里加一条，写清分类、标签、框架
 
 ## 目录
 
