@@ -60,6 +60,12 @@ Claude Model Selector 虽然是 Web Component，但它的 React 封装也是 `.t
 
 注意：`components/<分类>/<名称>/` 仍是收藏的源头（代码 + 提示词 + 展示说明都在那），`components/ui/` 是给 shadcn 安装用的同名副本，两边内容必须保持一致，不要只改一边。
 
+## 网页浏览
+
+- 浏览页文件：`site/index.html`，另有一份相同内容在 `docs/index.html`（备 GitHub Pages 用，Pages 的源选 main 分支 /docs 文件夹即可渲染）。
+- 打开方式：目前在仓库里点开 `site/index.html` 或 `docs/index.html` 看到的是文件本身；要变成可直接访问的网页地址，需要在仓库 Settings → Pages 里把源设为 main /docs，之后地址为 https://fanmofeng.github.io/ui-library/。
+- 浏览页功能：搜索、按分类筛、简单组件实时预览、复杂组件示意预览，每个卡片下都有代码和提示词的仓库链接。
+
 ## 怎么加一条
 
 1. 在 `components/<分类>/<名称>/` 按上面结构放齐文件
