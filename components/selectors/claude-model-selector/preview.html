@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>Claude Model Selector — 预览说明</title></head>
+<body style="font-family:system-ui;max-width:720px;margin:40px auto;padding:0 20px;line-height:1.7">
+<h1>Claude Model Selector / Effort Slider</h1>
+<p>这是一个 Web Component + React 封装，不依赖 Tailwind，见同目录 <code>component.tsx</code> 和 <code>demo.tsx</code>。</p>
+<h2>一眼看清</h2>
+<ul>
+<li>触发按钮显示当前档位，如 Low</li>
+<li>弹出的面板：Effort + 当前档位、帮助气泡、Faster → Smarter、滑杆</li>
+<li>六档：Low / Medium / High / Extra / Max / Ultracode，最后一档有紫色像素流光</li>
+</ul>
+<h2>怎么跑起来</h2>
+<pre>&lt;claude-model-selector value="0" open&gt;&lt;/claude-model-selector&gt;
+或 React：&lt;ClaudeModelSelector value={0} open /&gt;</pre>
+<p>展示图：待渲染后截图补到 <code>preview.png</code>，目前先以代码和本页为准，不贴假图。</p>
+</body></html>

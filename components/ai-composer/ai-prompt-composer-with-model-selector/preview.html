@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>AI Prompt Composer — 预览说明</title></head>
+<body style="font-family:system-ui;max-width:720px;margin:40px auto;padding:0 20px;line-height:1.7">
+<h1>AI Prompt Composer with Model Selector</h1>
+<p>这是一个 React + TypeScript 组件，需要在 React / Next.js 项目里运行，见同目录 <code>component.tsx</code>。</p>
+<h2>一眼看清</h2>
+<ul>
+<li>输入框：Plan / Build / Automate，输入 <code>@</code> 出上下文菜单</li>
+<li>左下：+ Add files、模式切换；右下：模型选择、录音、发送</li>
+<li>模型菜单：收藏、搜索、Effort 子菜单、Auto 开关</li>
+<li>深色 / 浅色主题切换，底部有升级横幅和演示导览</li>
+</ul>
+<h2>怎么跑起来</h2>
+<pre>放到 components/ui/ai-prompt-composer-with-model-selector.tsx
+import AIComposer from "@/components/ui/ai-prompt-composer-with-model-selector";
+&lt;AIComposer onSubmit={(s) =&gt; console.log(s)} /&gt;</pre>
+<p>展示图：待在 React 项目里渲染后截图补到 <code>preview.png</code>，目前先以代码和本页为准，不贴假图。</p>
+</body></html>
